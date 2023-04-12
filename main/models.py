@@ -34,7 +34,7 @@ class Bug(models.Model):
     status = models.BooleanField(default=True) #can't see on frontend
 
     def __str__(self):
-        return self.title
+        return self.name
     
 class BugAttribute(models.Model):
     bug = models.ForeignKey(Bug,on_delete=models.CASCADE)
@@ -43,4 +43,4 @@ class BugAttribute(models.Model):
     size = models.ForeignKey(Size,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.title #perhaps should be .name, .bug, or .bug.name
