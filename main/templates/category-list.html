@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <main class="container my-4">
-	<!-- Featured Products -->
+	<!-- Using Django Admin -->
 	<h3 class="my-4 border-bottom pb-1">Categories</h3>
 	<div class="row">
 		{% if data %}
@@ -11,12 +11,32 @@
 			<div class="card shadow">
 				<a href="#"><img src="/media/{{bug.image}}" class="card-img-top" alt="..."></a>
 				<div class="card-body">
-					<h6 class="card-text"><a href="#">{{bug.title}}</a></h6>
+					<h6 class="card-text"><a href="{% url 'bug-entry' %}">{{bug.title}}</a></h6>
 				</div>
 			</div>
 		</div>
 		{% endfor %}
 		{% endif %}
+	</div>
+
+	<!-- Manual -->
+	<div class="row">
+		<div class="col-md-3 mb-4">
+			<div class="card shadow">
+				<a href="#"><img src="/media/bug_imgs/crayfish.jpg" class="card-img-top" alt="..."></a>
+				<div class="card-body">
+					<h6 class="card-text"><a href="{% url 'placeholder' %}">Placeholder</a></h6>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 mb-4">
+			<div class="card shadow">
+				<a href="#"><img src="/media/bug_imgs/crayfish.jpg" class="card-img-top" alt="..."></a>
+				<div class="card-body">
+					<h6 class="card-text"><a href="{% url 'placeholder2' %}">Placeholder 2</a></h6>
+				</div>
+			</div>
+		</div>
 	</div>
 </main>
 {% endblock %}

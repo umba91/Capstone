@@ -6,6 +6,11 @@ from django.conf.urls.static import static
 urlpatterns=[
     path('',views.home,name='home'),
     path('category-list',views.category_list,name='category-list'),
+    path('bug-entry',views.bug_entry,name='bug-entry'),
+
+    path('placeholder.html',views.placeholder,name='placeholder'),
+    path('bug_pages/placeholder.html',views.placeholder,name='placeholder'),
+    path('bug_pages/placeholder2.html',views.bug_page_manual,name='placeholder2'),
 ]
 
 if settings.DEBUG:

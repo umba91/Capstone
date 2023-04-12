@@ -1,13 +1,13 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register(Specie)
+admin.site.register(Species)
 admin.site.register(Color)
 admin.site.register(Size)
 
 
 class BugAdmin(admin.ModelAdmin):
-    list_display=('id','title','species','color','size','status')
+    list_display=('id','name','species','status')
     list_editable=('status',)
 admin.site.register(Bug,BugAdmin)
 
