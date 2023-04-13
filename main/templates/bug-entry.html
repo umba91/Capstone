@@ -3,27 +3,20 @@
 {% block content %}
 <main class="container my-4">
 
-    <!--                           What you edit starts here                         -->
     
-	<h3 class="my-4 border-bottom pb-1">Bug name goes here, replace me</h3> <!-- Bug name/title goes here, to the left -->
+	<h3 class="my-4 border-bottom pb-1">{{ data.name }}</h3> 
 	<div class="row">
 		<div class="col-md-3 mb-4">
-            <img class="image" src="/media/bug_imgs/crayfish.jpg" height="500px"></img> <!-- put the file name of the picture you gave me here. Replace the word placeholder with file name -->
-            <br> <!-- This is a line brake. Think of it as pressing enter -->
-
-            <p>Any text goes here, replace me</p> <!-- p is for paragraph. long strings of text go here. Perhaps use this for description -->
+            <img class="image" src="/media/{{data.image}}" height="500px"></img> 
             <br>
-
-            <label>Fact List</label> <!-- label is label. Not sure its differences from other text forms -->
-
-            <ul class="fact-list"> <!-- ul means unordered list, aka bullets. replace with ol (ordered list) for numbers -->
-                <li>list entry, replace me</li> <!-- li is for list entry. copy&paste for more entries -->
-                <li>list entry, replace me</li>
-                <li>list entry, replace me</li>
-            </ul>
+            <br>
+            <label><b><u> Description: </u></b></label>
+            <p>{{ data.description }}</p>
             
-            <!--                            What you edit ends here                    -->
+            <label><b><u> Facts: </u></b></label>
+            <p>{{ data.facts }}</p>
             
+
 		</div>
 	</div>
 </main>
