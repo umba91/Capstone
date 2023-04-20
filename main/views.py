@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Species
 from .models import Bug
+from .models import AboutUs
 
 # Home Page
 def home(request):
@@ -16,3 +17,7 @@ def bug_entry(request, name):
 
 def placeholder(request):
     return render(request, 'bug_pages/')
+
+def about_us(request):
+    data = AboutUs.objects.first()
+    return render(request, 'About_Us.html',{'data':data})

@@ -8,6 +8,7 @@ urlpatterns=[
     path('',views.home,name='home'),
     path('category-list',views.category_list,name='category-list'),
     path('bug-entry/<str:name>',views.bug_entry,name='bug-entry'),
+    path('About_Us',views.about_us,name='about_us'),
 
     path('placeholder.html',views.placeholder,name='placeholder'),
     path('bug_pages/',views.placeholder,name='placeholder'),

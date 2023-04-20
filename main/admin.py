@@ -4,6 +4,7 @@ from .models import *
 admin.site.register(Species)
 admin.site.register(Color)
 admin.site.register(Size)
+admin.site.register(AboutUs)
 
 
 class BugAdmin(admin.ModelAdmin):

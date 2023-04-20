@@ -7,6 +7,9 @@ class Banner(models.Model):
 class Species(models.Model):
     title = models.CharField(max_length = 100)
     image = models.ImageField(upload_to = "bug_imgs/")
+    
+    class Meta:
+        verbose_name_plural = 'Species'
 
     def __str__(self):
         return self.title
@@ -30,6 +33,7 @@ class Bug(models.Model):
     description = models.TextField()
     facts = models.TextField()
     factnum = models.IntegerField()
+    citations = models.TextField()
     species = models.ForeignKey(Species,on_delete=models.CASCADE)
     status = models.BooleanField(default=True) #can't see on frontend
 
@@ -44,3 +48,10 @@ class BugAttribute(models.Model):
 
     def __str__(self):
         return self.title #perhaps should be .name, .bug, or .bug.name
+
+
+class AboutUs(models.Model):
+    description = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'AboutUs'
