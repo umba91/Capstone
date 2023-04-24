@@ -31,4 +31,3 @@ All of these commands are very similar on mac, just google the windows command a
 For a quick tutorial on making a Django website, click on the following link:
 https://www.youtube.com/watch?v=jCDZSVHA0-Y&t=185
 We used multiple videos in its accompanying playlist
-# Final-Capstone-Project
