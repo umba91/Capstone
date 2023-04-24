@@ -1,6 +1,7 @@
 # Read Me #
 
 ## Installation ##
+(Click Raw to see properly formatted document)
 
 Windows Instructions:
 
