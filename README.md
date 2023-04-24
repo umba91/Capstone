@@ -2,32 +2,29 @@
 
 ## Installation ##
 
-To make sure you have all the required files:
-1. Install python
-2. Enter `pip install -r requirements` into Command Prompt.
-      Do this in your environment folder as well if you plan to use one.
+Windows Instructions:
 
-## Running the server ##
+Go to https://github.com/umba91/Capstone
+	Press Green “Code” button and download ZIP file (main branch)
+Make new folder, I named mine capstone, and put “Capstone-main” in it
 
-To run the server, while in the project folder (capstone):
+Install pip: py -m pip install pip
+(upgrade current version) py -m pip install — upgrade pip
 
-Device | Command
-------------- | -------------
-Windows | `py manage.py runserver`
-Mac | `python manage.py runserver`
+Install Python:
+Run “python” command in terminal
 
-It will say ctrl+break to close, but ctrl+c also works. I believe ctrl is replaced with command for Mac
+Install virtual environment and packages (IN CAPSTONE FOLDER NOT MAIN):
+pip install virtualenv
+py -m venv env
+.\env\Scripts\activate
+	If error - run Set-ExecutionPolicy Unrestricted -Scope Process
+pip install django
+py -m pip install Pillow
+Cd Capstone-main
 
-## Virtual Environment ##
 
-If you perhaps are unable to run the server, consider making an virtual environment(venv for short)
-1. Install venv using `pip install venv` in Command Prompt
-2. Ensure your PATH includes the path to your Scripts file in the venv you create
-3. Activate your venv by typing in the relative path to activate file in Scripts
-    For example: ".\(venv name\)\Scripts\activate" if you are in the project folder
-    "." means this folder
-  You might need to make a python virtual environment in a new folder within the project
-
+All of these commands are very similar on mac, just google the windows command and it will tell you the equal mac command
 
 ### Extra ###
 For a quick tutorial on making a Django website, click on the following link:
